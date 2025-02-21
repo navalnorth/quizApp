@@ -43,7 +43,7 @@ const CommencerQuiz = (id: number) => {
 const VITE_API_URL = process.env.VUE_APP_API_URL;
 const afficheListActive = async () => {
     try {
-        const response = await fetch(`${VITE_API_URL}/api/quiz/isActive`, {
+        const response = await fetch(`${VITE_API_URL}/api/quiz/quiz/isActive`, {
             method: 'GET',
             headers: {
                 'Accept': 'application/json, text/plain, /',

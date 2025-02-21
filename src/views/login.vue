@@ -87,9 +87,6 @@ const setTokenStore = (token: Token) => {
 
 const api = process.env.VUE_APP_API_URL;
 
-console.log(api);
-
-
 const login = async () => {
   const data = {
     email: email.value,
@@ -97,7 +94,7 @@ const login = async () => {
   };
 
   try {
-    const response = await fetch(`${api}/api/users/login`, {
+    const response = await fetch(`${api}/api/quiz/users/login`, {
       method: 'POST',
       body: JSON.stringify(data),
       headers: {

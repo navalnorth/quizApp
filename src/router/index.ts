@@ -53,7 +53,7 @@ const routes: Array<RouteRecordRaw> = [
 ]
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory('/quiz/'),
   routes
 })
 
@@ -64,7 +64,7 @@ router.beforeEach((to, from, next) => {
   const isLoggedIn = store.getters.isLoggedIn;
   const isAdmin = store.getters.isAdmin;
 
-  if (['/', '/register', '/'].includes(to.path)) {
+  if (['/', '/register', '/login'].includes(to.path)) {
     next(); 
   } else if (to.matched.some(record => record.meta.requiresAuth)) {
     if (!isLoggedIn) {

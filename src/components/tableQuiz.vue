@@ -57,7 +57,7 @@ const emitDelete = () => {
 
 const deleteQuiz = async () => {
     try {
-        const response = await fetch(`${VITE_API_URL}/api/quiz/delete/${props.id}`, {
+        const response = await fetch(`${VITE_API_URL}/api/quiz/quiz/delete/${props.id}`, {
             method: 'DELETE',
         })
         if (response.ok) {
@@ -79,7 +79,7 @@ const changementFlag = () => {
 const VITE_API_URL = process.env.VUE_APP_API_URL;
 const flag = async () => {
     try {
-        const response = await fetch(`${VITE_API_URL}/api/quiz/isActive/${props.id}`, {
+        const response = await fetch(`${VITE_API_URL}/api/quiz/quiz/isActive/${props.id}`, {
             method: 'PUT',
             body: JSON.stringify({
                 isActive: isToggleActive.value,

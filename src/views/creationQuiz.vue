@@ -171,7 +171,7 @@ const CreationQuiz = async () => {
             reponses: q.reponses,
             reponse_correcte: q.reponse_correcte
         }))
-        const response = await fetch(`${VITE_API_URL}/api/quiz/creationQuiz`, {
+        const response = await fetch(`${VITE_API_URL}/api/quiz/quiz/creationQuiz`, {
             method: 'POST',
             body: JSON.stringify({
                 nom_quiz: monQuiz.value.nom_quiz,

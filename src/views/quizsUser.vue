@@ -100,7 +100,7 @@ const suivant = () => {
 const VITE_API_URL = process.env.VUE_APP_API_URL;
 const fetchQuiz = async () => {
     try {
-        const response = await fetch(`${VITE_API_URL}/api/quiz/updateQuiz/${route.params.id_quiz}`, {
+        const response = await fetch(`${VITE_API_URL}/api/quiz/quiz/updateQuiz/${route.params.id_quiz}`, {
             method: 'GET',
         });
         if (!response.ok) {

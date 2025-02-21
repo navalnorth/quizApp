@@ -1,7 +1,7 @@
 const webpack = require('webpack');
 
 module.exports = {
-  publicPath: '/04/04/',
+  publicPath: '/quiz/',
   configureWebpack: {
     plugins: [
       new webpack.DefinePlugin({

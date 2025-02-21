@@ -44,7 +44,7 @@ const deleteQuiz = (index: number) => {
 const VITE_API_URL = process.env.VUE_APP_API_URL;
 const listQuiz = async () => {
     try {
-        const response = await fetch(`${VITE_API_URL}/api/quiz/listQuiz`, {
+        const response = await fetch(`${VITE_API_URL}/api/quiz/quiz/listQuiz`, {
             method: 'GET',
             headers: {
                 'Accept': 'application/json, text/plain, /',

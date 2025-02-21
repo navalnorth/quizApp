@@ -87,7 +87,7 @@ const register = async () => {
     };
 
     try {
-        const response = await fetch(`${VITE_API_URL}/api/users/register`, {
+        const response = await fetch(`${VITE_API_URL}/api/quiz/users/register`, {
             method: 'POST',
             body: JSON.stringify(data),
             headers: {

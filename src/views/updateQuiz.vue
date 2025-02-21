@@ -176,7 +176,7 @@ const modifierQuiz = async () => {
             reponses: q.reponses,
             reponse_correcte: q.reponse_correcte
         }))
-        const response = await fetch(`${VITE_API_URL}/api/quiz/updateQuiz/${route.params.id_quiz}`, {
+        const response = await fetch(`${VITE_API_URL}/api/quiz/quiz/updateQuiz/${route.params.id_quiz}`, {
             method: 'PUT',
             body: JSON.stringify({
                 nom_quiz: monQuiz.value.nom_quiz,
@@ -199,7 +199,7 @@ const modifierQuiz = async () => {
 
 const fetchQuiz = async () => {
     try {
-        const response = await fetch(`${VITE_API_URL}/api/quiz/updateQuiz/${route.params.id_quiz}`, {
+        const response = await fetch(`${VITE_API_URL}/api/quiz/quiz/updateQuiz/${route.params.id_quiz}`, {
             method: 'GET',
         });
         if (!response.ok) {
